@@ -75,11 +75,13 @@ Build the project from source and install dependencies:
 
 ### Usage
 
-Run the project with:
+**Run the project with:**
 
    ```sh
    cd Design-Web-Souplesse-Fitness
+   open index.html into any navigator.
 
 
 
-end
+
+
