@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion / Inscription - Souplesse Fitness</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.jpg" alt="Souplesse Fitness Logo">
+                <span>Souplesse Fitness</span>
+            </div>
+            <a href="index.html" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                Retour à l'accueil
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Auth Container -->
+        <div class="auth-container">
+            <div class="auth-wrapper">
+                <!-- Login Form -->
+                <div class="auth-card login-card active">
+                    <div class="auth-header">
+                        <div class="auth-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h2>Connexion</h2>
+                        <p>Connectez-vous à votre compte</p>
+                    </div>
+
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="loginEmail" placeholder="Email" required>
+                                <label for="loginEmail">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="loginPassword" placeholder="Mot de passe" required>
+                                <label for="loginPassword">Mot de passe</label>
+                                <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="checkmark"></span>
+                                Se souvenir de moi
+                            </label>
+                            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Se connecter</span>
+                            <div class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            Continuer avec Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            Continuer avec Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-switch">
+                        <p>Pas encore de compte ? <a href="#" onclick="switchToRegister()">S'inscrire</a></p>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-card register-card">
+                    <div class="auth-header">
+                        <div class="auth-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h2>Inscription</h2>
+                        <p>Créez votre compte gratuitement</p>
+                    </div>
+
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="firstName" placeholder="Prénom" required>
+                                    <label for="firstName">Prénom</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" id="lastName" placeholder="Nom" required>
+                                    <label for="lastName">Nom</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="registerEmail" placeholder="Email" required>
+                                <label for="registerEmail">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" placeholder="Téléphone">
+                                <label for="phone">Téléphone</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="registerPassword" placeholder="Mot de passe" required>
+                                <label for="registerPassword">Mot de passe</label>
+                                <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Faible</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="confirmPassword" placeholder="Confirmer mot de passe" required>
+                                <label for="confirmPassword">Confirmer mot de passe</label>
+                                <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="termsAccepted" required>
+                                <span class="checkmark"></span>
+                                J'accepte les <a href="#" class="terms-link">Conditions d'utilisation</a> et la <a href="#" class="privacy-link">Politique de confidentialité</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Créer mon compte</span>
+                            <div class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                        </button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="social-btn google-btn">
+                            <i class="fab fa-google"></i>
+                            S'inscrire avec Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <i class="fab fa-facebook-f"></i>
+                            S'inscrire avec Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-switch">
+                        <p>Déjà un compte ? <a href="#" onclick="switchToLogin()">Se connecter</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Modal -->
+            <div class="modal-overlay" id="successModal">
+                <div class="modal-content">
+                    <div class="modal-icon success">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Inscription réussie !</h3>
+                    <p>Votre compte a été créé avec succès. Un email de confirmation vous a été envoyé.</p>
+                    <button class="btn btn-primary" onclick="closeModal()">Continuer</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="auth-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Souplesse Fitness">
+                        <span>Souplesse Fitness</span>
+                    </div>
+                    <p>Transformez votre corps, transformez votre vie.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#about">À propos</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Compte</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchToLogin()">Connexion</a></li>
+                        <li><a href="#" onclick="switchToRegister()">Inscription</a></li>
+                        <li><a href="#">Mot de passe oublié ?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Forme, 75000 Paris</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@souplesse-fitness.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Souplesse Fitness. Tous droits réservés.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="--delay: 0s; --duration: 6s;">💪</div>
+        <div class="floating-element" style="--delay: 1s; --duration: 8s;">🏃‍♂️</div>
+        <div class="floating-element" style="--delay: 2s; --duration: 7s;">🏋️‍♀️</div>
+        <div class="floating-element" style="--delay: 3s; --duration: 9s;">🚴‍♂️</div>
+        <div class="floating-element" style="--delay: 4s; --duration: 6s;">🤸‍♀️</div>
+        <div class="floating-element" style="--delay: 5s; --duration: 8s;">⚡</div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="js/auth.js"></script>
+</body>
+</html>

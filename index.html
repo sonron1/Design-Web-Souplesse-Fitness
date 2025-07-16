@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souplesse Fitness - Votre Salle de Sport Moderne</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="images/logo.jpg" alt="Souplesse Fitness Logo">
+            <span>Souplesse Fitness</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Abonnements</a></li>
+            <li><a href="#trainers">Entraîneurs</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+            <a href="auth.html" class="auth-btn login-btn">
+                <i class="fas fa-sign-in-alt"></i>
+                Connexion
+            </a>
+            <a href="auth.html#register" class="auth-btn register-btn">
+                <i class="fas fa-user-plus"></i>
+                Inscription
+            </a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Transformez Votre Corps avec <span class="highlight">Souplesse Fitness</span></h1>
+            <p>Découvrez une nouvelle façon de vous entraîner dans notre salle de sport moderne équipée des dernières technologies.</p>
+            <div class="hero-buttons">
+                <a href="auth.html#register" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Commencer maintenant
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i>
+                    Nos Services
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/banner.jpg" alt="Souplesse Fitness Hero">
+        </div>
+    </div>
+    <div class="hero-stats">
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Membres Satisfaits</p>
+        </div>
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Entraîneurs Experts</p>
+        </div>
+        <div class="stat-item">
+            <h3>5</h3>
+            <p>Années d'Expérience</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>À Propos de Souplesse Fitness</h2>
+            <p>Votre partenaire pour une transformation physique complète</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Notre Mission</h3>
+                <p>Chez Souplesse Fitness, nous croyons que chaque personne mérite d'atteindre ses objectifs de fitness dans un environnement motivant et professionnel.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Équipements de dernière génération</li>
+                    <li><i class="fas fa-check"></i> Entraîneurs certifiés et expérimentés</li>
+                    <li><i class="fas fa-check"></i> Programmes personnalisés</li>
+                    <li><i class="fas fa-check"></i> Ambiance conviviale et motivante</li>
+                </ul>
+                <div class="about-cta">
+                    <a href="auth.html#register" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Rejoignez-nous
+                    </a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/pexels-nappy.jpg" alt="À propos">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nos Services</h2>
+            <p>Des programmes adaptés à tous vos besoins</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Musculation</h3>
+                <p>Développez votre force et votre masse musculaire avec nos équipements professionnels.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Cardio Training</h3>
+                <p>Améliorez votre endurance cardiovasculaire avec nos machines cardio dernière génération.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Cours Collectifs</h3>
+                <p>Participez à nos cours de groupe dynamiques et motivants dans une ambiance conviviale.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Coaching Personnel</h3>
+                <p>Bénéficiez d'un accompagnement personnalisé avec nos entraîneurs professionnels.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nos Abonnements</h2>
+            <p>Choisissez l'abonnement qui vous convient le mieux</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Découverte</h3>
+                    <div class="price">
+                        <span class="currency">€</span>
+                        <span class="amount">29</span>
+                        <span class="period">/mois</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Accès salle de musculation</li>
+                        <li><i class="fas fa-check"></i> Espace cardio</li>
+                        <li><i class="fas fa-check"></i> Vestiaires & douches</li>
+                        <li><i class="fas fa-times"></i> Cours collectifs</li>
+                        <li><i class="fas fa-times"></i> Coaching personnel</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="auth.html#register" class="btn btn-outline">
+                        <i class="fas fa-arrow-right"></i>
+                        Choisir
+                    </a>
+                </div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Le Plus Populaire</div>
+                <div class="pricing-header">
+                    <h3>Premium</h3>
+                    <div class="price">
+                        <span class="currency">€</span>
+                        <span class="amount">59</span>
+                        <span class="period">/mois</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Accès salle de musculation</li>
+                        <li><i class="fas fa-check"></i> Espace cardio</li>
+                        <li><i class="fas fa-check"></i> Vestiaires & douches</li>
+                        <li><i class="fas fa-check"></i> Cours collectifs illimités</li>
+                        <li><i class="fas fa-check"></i> 2 séances coaching/mois</li>
+                        <li><i class="fas fa-check"></i> Programme nutrition</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="auth.html#register" class="btn btn-primary">
+                        <i class="fas fa-crown"></i>
+                        Choisir
+                    </a>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Elite</h3>
+                    <div class="price">
+                        <span class="currency">€</span>
+                        <span class="amount">99</span>
+                        <span class="period">/mois</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Accès salle de musculation</li>
+                        <li><i class="fas fa-check"></i> Espace cardio</li>
+                        <li><i class="fas fa-check"></i> Vestiaires & douches</li>
+                        <li><i class="fas fa-check"></i> Cours collectifs illimités</li>
+                        <li><i class="fas fa-check"></i> Coaching personnel illimité</li>
+                        <li><i class="fas fa-check"></i> Programme nutrition</li>
+                        <li><i class="fas fa-check"></i> Suivi personnalisé</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="auth.html#register" class="btn btn-outline">
+                        <i class="fas fa-star"></i>
+                        Choisir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trainers Section -->
+<section id="trainers" class="trainers">
+    <div class="container">
+        <div class="section-header">
+            <h2>Nos Entraîneurs</h2>
+            <p>Une équipe d'experts à votre service</p>
+        </div>
+        <div class="trainers-grid">
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="images/edgar-chaparro.jpg" alt="Entraîneur">
+                </div>
+                <div class="trainer-info">
+                    <h3>Alexandre Martin</h3>
+                    <p>Spécialiste Musculation</p>
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="images/madison-lavern.jpg" alt="Entraîneur">
+                </div>
+                <div class="trainer-info">
+                    <h3>Sophie Dubois</h3>
+                    <p>Coach Fitness & Nutrition</p>
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="images/pexels-zakaria.jpg" alt="Entraîneur">
+                </div>
+                <div class="trainer-info">
+                    <h3>Pierre Moreau</h3>
+                    <p>Entraîneur Cardio</p>
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="section-header">
+            <h2>Notre Salle</h2>
+            <p>Découvrez nos installations modernes</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/pexels-mastercowley.jpg" alt="Salle de musculation">
+                <div class="gallery-overlay">
+                    <h3>Espace Musculation</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/pexelsvictorfreitas.jpg" alt="Espace cardio">
+                <div class="gallery-overlay">
+                    <h3>Zone Cardio</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/pexels-nappy-.jpg" alt="Cours collectifs">
+                <div class="gallery-overlay">
+                    <h3>Salle de Cours</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contactez-nous</h2>
+            <p>Prêt à commencer votre transformation ?</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Adresse</h3>
+                        <p>123 Rue de la Forme<br>75000 Paris, France</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>contact@souplesse-fitness.fr</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Horaires</h3>
+                        <p>Lun - Ven: 6h00 - 22h00<br>Sam - Dim: 8h00 - 20h00</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <input type="tel" placeholder="Votre téléphone">
+                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section id="map" class="map-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Notre Localisation</h2>
+            <p>Trouvez-nous facilement</p>
+        </div>
+        <div class="map-container">
+            <div id="map" class="map"></div>
+            <div class="map-info">
+                <h3>Souplesse Fitness</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Forme, 75000 Paris, France</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@souplesse-fitness.fr</p>
+                <div class="map-directions">
+                    <h4>Transports</h4>
+                    <p><i class="fas fa-subway"></i> Métro: Ligne 1 - Station République</p>
+                    <p><i class="fas fa-bus"></i> Bus: Lignes 20, 65, 96</p>
+                    <p><i class="fas fa-car"></i> Parking disponible</p>
+                </div>
+                <div class="map-actions">
+                    <a href="https://www.google.com/maps/search/123+Rue+de+la+Forme+75000+Paris+France" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="Souplesse Fitness">
+                    <span>Souplesse Fitness</span>
+                </div>
+                <p>Votre partenaire pour une transformation physique complète dans un environnement moderne et motivant.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Abonnements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Compte</h3>
+                <ul>
+                    <li><a href="auth.html">Connexion</a></li>
+                    <li><a href="auth.html#register">Inscription</a></li>
+                    <li><a href="#">Mon Profil</a></li>
+                    <li><a href="#">Mes Réservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <ul>
+                    <li>Lundi - Vendredi: 6h00 - 22h00</li>
+                    <li>Samedi - Dimanche: 8h00 - 20h00</li>
+                    <li>Jours fériés: 8h00 - 18h00</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Souplesse Fitness. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
