@@ -1,4 +1,4 @@
-# DESIGN-WEB-SOUPLESSE-FITNESS
+ # DESIGN-WEB-SOUPLESSE-FITNESS
 
 *Empowering Seamless Fitness Journeys Everywhere*
 
@@ -59,4 +59,27 @@ Build the project from source and install dependencies:
 
    ```sh
    git clone https://github.com/sonron1/Design-Web-Souplesse-Fitness
-cd Design-Web-Souplesse-Fitness
+
+
+2. **Navigate to the project directory:**
+
+   ```sh
+   cd Design-Web-Souplesse-Fitness
+
+
+3. **Install the dependencies:**
+
+   ```sh
+   # INSERT-RUN-COMMAND-HERE
+
+
+### Usage
+
+Run the project with:
+
+   ```sh
+   cd Design-Web-Souplesse-Fitness
+
+
+
+end
